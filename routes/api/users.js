@@ -27,6 +27,13 @@ router.patch(
   controlWrapper(controllerContacts.updateAvatar)
 );
 
+router.get(
+  "/verify/:verificationToken",
+  controlWrapper(controllerContacts.verifyEmail)
+);
+
+router.get("/verify/", controlWrapper(controllerContacts.verifyAgain));
+
 module.exports = router;
 
 // {
